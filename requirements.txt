@@ -1,0 +1,11 @@
+# crack-detection-pipeline — Python deps (Python 3.10+)
+# Annotation (Label Studio) is installed separately; see README.
+
+ultralytics>=8.3.0     # YOLO11 training + inference
+paho-mqtt>=2.1.0       # MQTT v2 client API (detect_mqtt.py)
+opencv-python>=4.8.0   # webcam capture + preview window
+# numpy / torch are pulled in transitively by ultralytics.
+
+# Optional: run the annotation tool from the same env instead of a
+# separate install. Heavy — prefer its own venv in practice.
+# label-studio>=1.13.0

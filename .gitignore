@@ -1,0 +1,13 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# training runs and datasets (too big for git)
+runs/
+dataset/
+ds/
+*.zip
+
+# model weights are big, but keeping best.pt in the repo is fine for this project
+# models/best.pt
