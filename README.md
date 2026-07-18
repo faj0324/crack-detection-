@@ -168,9 +168,11 @@ with a free T4 GPU.
 | Recall          | 1.000      |
 | Inference speed | 3.2 ms/img |
 
-![Training curves](docs/results.png)
+![Training curves](<img width="2400" height="1200" alt="results" src="https://github.com/user-attachments/assets/3c70cb88-9f7b-4b1b-8605-a4b9b1505f0e" />
+)
 
-![Validation predictions](docs/val_batch0_pred.jpg)
+![Validation predictions](<img width="1920" height="1920" alt="val_batch0_pred" src="https://github.com/user-attachments/assets/6bd5409d-0a08-4eda-af56-1869a6d75300" />
+)
 
 **A note on these numbers.** The dataset is small (150 images, only about 30 in
 the validation set) and every single image has a crack in it. There are no
