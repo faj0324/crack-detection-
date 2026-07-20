@@ -36,17 +36,23 @@ working and Node-RED will work too.
 
 ## 3. Run the detector on a folder of images
 
-Point `--source` at a folder of `.jpg` or `.png` images. `--no-preview` means it
-won't try to open a window, which is useful over SSH or if there is no display:
+Point `--source` at a folder of `.jpg` or `.png` images. There are some test
+images included in `testimgs/` so this works straight after cloning.
+`--no-preview` means it won't try to open a window, which is useful over SSH or
+if there is no display:
 
 ```bash
 python scripts/detect_mqtt.py \
   --weights models/best.pt \
-  --source path/to/test_images \
+  --source testimgs \
   --broker localhost \
   --conf 0.5 \
   --no-preview
 ```
+
+One thing to know: the script goes through the folder once and then exits, so
+you get a short burst of messages. If you want it to keep going for a demo, just
+run it again (or loop it in the shell).
 
 It sends the results to `ivis/crack/detections` about twice a second and keeps
 the status on `online`. When you stop it with Ctrl-C it sends `offline`, and even
