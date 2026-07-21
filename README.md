@@ -9,7 +9,7 @@ like Roboflow. It goes from labelling images all the way to a live dashboard:
 The detections are sent over MQTT, so the camera script and the dashboard are
 separate programs that talk to each other. 
 
-There is only one class in this project: `crack`. 
+There is only one class in this project: `crack`. l
 
 ---
 
@@ -203,30 +203,6 @@ These are the actual steps I ran in Colab, after uploading the Label Studio
 
 `split_colab.py` does the same job as `prepare_dataset.py` but works on an
 already-unzipped folder, which was easier to use inside a Colab cell.
-
----
-
-## Why Label Studio and not Roboflow
-
-Roboflow is nice because it does a lot of things in one place, but it is a paid
-hosted service and you are tied to it. I wanted everything open source and
-running on my own machine, so I used Label Studio for the labelling and let
-Ultralytics and my own script handle the parts Label Studio doesn't do.
-
-| Thing              | Label Studio (what I used)              | Roboflow                        |
-| ------------------ | --------------------------------------- | ------------------------------- |
-| Labelling          | Yes                                     | Yes                             |
-| Augmentation       | No, YOLO does it during training        | Yes, built in                   |
-| Train/val/test split | No, my `prepare_dataset.py` does it   | Yes, one click                  |
-| Dataset versioning | Basic, mostly manual                    | Yes, proper versioning          |
-| Training           | No, done separately with YOLO11         | Yes, hosted training            |
-| Hosting            | You host it yourself                     | Hosted for you                  |
-| Export formats     | YOLO, COCO, VOC, etc.                    | Lots of formats                 |
-| Cost               | Free and open source                     | Free tier then paid             |
-| Data privacy       | Stays on your own machine                | In the cloud by default         |
-
-So the trade-off is that Roboflow saves you effort but costs money, and this
-setup takes a bit more work but is free and stays on your own hardware.
 
 ---
 
