@@ -7,12 +7,9 @@ like Roboflow. It goes from labelling images all the way to a live dashboard:
 **Label Studio (labelling) → YOLO11 (model) → Node-RED (dashboard).**
 
 The detections are sent over MQTT, so the camera script and the dashboard are
-separate programs that talk to each other. I based the general idea on the
-[IVIS project](https://github.com/msf4-0/Integrated-Vision-Inspection-System-IVIS),
-which also uses Label Studio for labelling and MQTT to feed Node-RED.
+separate programs that talk to each other. 
 
-There is only one class in this project: `crack`. I did not include a dataset,
-you have to bring your own images and labels.
+There is only one class in this project: `crack`. 
 
 ---
 
